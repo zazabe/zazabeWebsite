@@ -1,0 +1,120 @@
+body.print {
+	background: none;
+	font-size: 12pt;
+	width: 480pt;
+}
+
+
+body.print .contact {
+	margin: 0 0 0 282pt;
+}
+
+body.print tbody td {
+	width: 75%;
+}
+
+body.print h2 {
+	border-bottom:1px solid;
+	display:block;
+	font-size:20pt;
+	margin:15px 0 0;
+}
+
+body.print .skills-bloc h2,
+body.print table h2 {
+	font-size:12pt;
+	border-bottom:none;
+	margin:0;
+}
+
+body.print tbody .diplomas li {
+	font-size:9pt;
+	margin: 0;
+	padding: 0;
+}
+
+body.print tbody .diplomas img {
+	margin:0 4px 0 0;
+}
+
+body.print tbody .descriptions li, body.print tbody .projects li, body.print tbody .subjects li {
+	font-size:9pt;
+	margin: 0;
+	padding: 0;
+}
+
+body.print tbody td.years {
+	font-size:14pt;
+	width: 25%;
+}
+
+body.print .skills li {
+	clear:none;
+	font-size:12px;
+	width:inherit;
+}
+
+body.print .skills .spacer {
+	display:block;
+	float:none;
+	width:inherit;
+}
+
+body.print .skill_list .skills-bloc {
+	float: none;
+	display: inline-table;
+	margin:0 5px 0 0;
+	padding: 0;
+}
+
+body.print .skills .skillbar {
+	float:none;
+}
+
+body.print table {
+	margin: 0;
+	clear: none;
+}
+
+body.print tbody .descriptions li {
+	float: none;
+	display: inline-table;
+}
+
+
+body.print tbody tr.details,
+body.print tbody tr {
+	background: none;
+}
+body.print tbody tr.details {
+	border-top:1px solid #DDDDDD;
+	border-bottom:1px solid #DDDDDD;
+	margin:10px 0 0;
+	padding: 0; 
+}
+
+body.print tbody .descriptions {
+	width: 75%;
+}
+body.print tbody .related {
+	width: 25%;
+	border-right:1px solid #DDDDDD;
+}
+
+body.print #sfWebDebug,
+body.print a.back {
+	display: none;
+}
+
+
+body.print .skills .skillbar.off {
+	height:15px;
+	margin:3px 0;
+	width:128px;
+}
+
+body.print #sfWebDebug,
+body.print a.back {
+	display: none;
+}
+

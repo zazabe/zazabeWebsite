@@ -1,0 +1,95 @@
+#middle {
+	position: relative;
+	float: right;
+	width:587px;
+	height: 528px;
+	background: url(../images/box-bg.jpg) 0px 0px no-repeat;
+	left:2px;
+}
+
+#boxBorder {
+	margin: 0 2px 2px 2px;
+	overflow: hidden;
+	width: 582px;
+	height: 524px;
+}
+
+#boxes {
+	margin:6px 0 0 4px;
+}
+
+#boxes li h2 a {
+	font-size: 0.7em;
+}
+
+#boxes li a.pic {
+	display: block;
+	width: 160px;
+	height: 100px;
+	position:absolute;
+	left:10px;
+	top:45px;
+	text-align:center;
+	border: 2px solid #efefef;
+}
+
+#boxes img {
+	width:160px;
+}
+
+#boxes li .article_infos {
+	position: absolute;
+	bottom: 3px;
+}
+
+#boxes li {
+	position: relative;
+	width: 182px;
+	height: 161px;
+	float: left;
+	background: #eee;
+	
+	overflow: hidden;
+	margin: 5px;
+	background: url(../images/box-bottom.png) bottom center no-repeat;
+	
+	-moz-box-shadow:0px 0px 8px #999;
+	box-shadow:0px 0px 8px #999;
+	
+}
+
+
+#boxes li h2 {
+	display: block;
+	width: 182px;
+	height: 35px;
+	background: url(../images/box-top.png) top center no-repeat;
+	text-align: center;
+	line-height:35px;
+}
+
+#boxes li h2 a,#boxes li h2 a:active, #boxes li h2 a:visited {
+	color: #fafafa;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+
+#boxes li h2 a:hover {
+	text-decoration: underline;
+}
+
+#boxes li p {
+	height: 100px;
+	overflow: hidden;
+	padding: 5px;
+}
+
+
+
+#boxes li {
+}
+
+#content > a {
+	font-size: 2em;
+}

@@ -1,0 +1,148 @@
+#banner {
+	height: 72px;
+	background: url(../images/menu-bg.png) repeat-x bottom center;
+	position: relative;
+}
+
+#middle-banner {
+	margin: 0 auto 0 auto;
+	width: 825px;
+	height: 72px;
+	background: url(../images/menu-middle-bg.png) no-repeat bottom center;
+}
+
+#draw {
+	margin: 0 auto 0 auto;
+	width: 825px;
+	height: 182px;
+	overflow: hidden;
+	position: relative;
+	background:  #D0DFF5;
+	display: none;
+}
+
+#sea {
+	position: absolute;
+	width: 796px;
+	height: 167px;
+	background: url(../images/sea.png) no-repeat top center;
+	top: 5px;
+	left: 14px;
+}
+
+#montain1 {
+	position: absolute;
+	width: 796px;
+	height: 167px;
+	background: url(../images/montain1.png) no-repeat top center;
+	top: 5px;
+	left: 14px;
+}
+
+#montain2 {
+	position: absolute;
+	width: 796px;
+	height: 167px;
+	background: url(../images/montain2.png) no-repeat top center;
+	top: 5px;
+	left: 14px;
+}
+
+#sun {
+	background:url("../images/sun.png") no-repeat scroll center top;
+	height:180px;
+	left:145px;
+	position:absolute;
+	top:-40px;
+	width:180px;
+}
+
+#frame {
+	position: absolute;
+	width: 825px;
+	height: 182px;
+	background: url(../images/frame.png) no-repeat top center;
+}
+
+#menu {
+	position: relative;
+	margin: 0 auto 0 auto;
+	width: 825px;
+	height: 47px;
+	background: url(../images/menu.png) no-repeat top center;
+}
+
+#menu ul {
+	font-size: 20px;
+	font-family: Courier;
+	font-weight: bold;
+}
+
+#menu ul li {
+	float: left;
+	text-indent: 10px;
+}
+
+#menu ul li:first {
+	text-indent: 0px;
+}
+
+#menu a,#menu a:active {
+	text-decoration: none;
+	color: #b63a3a;
+}
+
+#menu a:hover {
+	text-decoration: underline;
+	color: #2a00e1;
+}
+
+#menu li span {
+	color: green;
+}
+
+#menu li span:before,#menu a:before {
+	content: "$";
+}
+
+#menu .code {
+	padding: 0 10px;
+}
+
+#menu .cursor {
+	text-decoration: blink;
+	color: #999;
+	font-weight: lighter;
+	margin: 0 0 0 -15px
+}
+
+#menu .display-button {
+	width: 25px;
+	height: 25px;
+	text-indent: 100px;
+	overflow: hidden;
+	display: block;
+	background: url(../images/bt-up.png) no-repeat;
+	position: absolute;
+	right: 15px;
+	top: 18px;
+	cursor: pointer;
+}
+
+#menu .display-button:hover {
+	background: url(../images/bt-up-over.png) no-repeat;
+}
+
+#menu .display-button.down {
+	background: url(../images/bt-down.png) no-repeat;
+}
+
+#menu .display-button.down:hover {
+	background: url(../images/bt-down-over.png) no-repeat;
+}
+
+#menu ul {
+	padding: 15px 0 0 20px;
+}
+*
+/

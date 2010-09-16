@@ -1,0 +1,44 @@
+#timeline {
+	width: 505px;
+	min-height: 300px;
+	background: url(../images/timeline-bg.png) 22px 0 repeat-y;
+	margin: -40px auto;
+}
+
+.timeslot img {
+	position: absolute;
+	left: 400px;
+}
+
+.timeslot.even img {
+	position: absolute;
+	left: -100px;
+}
+
+.timeslot {
+	width: 235px;
+	float: left;
+	margin: 0 0 10px;
+	padding: 10px 100px 0 0;
+	border-top: 3px solid #CCE2F7;
+	position: relative;
+}
+
+.timeslot span {
+	position: absolute;
+	right: -100px;
+	top: 27px;
+	font-size: 3em;
+	color: #999;
+}
+
+.even {
+	float: right;
+	padding: 10px 0 0 100px;
+	border-color: #ca0000;
+}
+
+.even span {
+	left: -100px;
+	color: #ca0000;
+}

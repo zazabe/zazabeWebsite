@@ -1,0 +1,380 @@
+/*  HOME CSS */
+
+
+body.home #left {
+	float: left;
+	margin: -10px 0 0;
+	width: 203px;
+	background: url(../images/bloc-left-repeat.jpg) 0px top repeat-y;
+}
+
+
+body.home #left #leftTop{
+	padding: 15px 15px;
+	width: 174px;
+	min-height: 500px;
+	background: url(../images/bloc-left-top.jpg)  0px top no-repeat;
+}
+
+
+body.home #left #leftBottom {
+	height: 24px;
+	width: 203px;
+	background: url(../images/bloc-left-bottom.jpg) 0px bottom no-repeat;
+}
+
+
+body.home #left p {
+	font-size: 1.4em;
+}
+
+body.home #left h2 {
+	display: block;
+	color: #fafafa;
+	font-weight: bold;
+	padding: 0 15px;
+	margin: 10px -15px;
+	line-height:50px;
+	width: 176px;
+	height: 67px;
+	background: url(../images/bloc-left-title.png) 0px top no-repeat;
+	text-align: center;
+}
+
+/* ARTICLE CSS */
+
+body.article { }
+
+
+body.article h4,
+body.article h3,
+body.article h2 {
+	margin:10px 0 5px;
+}
+
+
+body.article #footer {
+	position: relative;
+	bottom: 0px;
+}
+
+body.article p  { margin: 5px 0 0;} 
+
+body.article #main h1 {
+	text-indent: 20px;
+	font-size: 3.1em;
+}
+
+
+body.article #relative {
+	background: url(../images/content-left.png) right top  no-repeat;
+	padding:10px;
+	width:225px;
+	min-height: 450px;
+	float: left;
+	position: relative;
+}
+
+
+body.article #relContent {
+	margin:0px 50px;
+	overflow: hidden;
+}
+
+body.article #relSwitcher {
+	position: absolute;
+	right: 5px;
+	top: 5px;
+}
+
+
+
+body.article #relative h2 {
+	line-height: 2.5em;
+}
+
+body.article #relative a.colorbox {
+
+}
+
+body.article #article {
+	float: right;
+	width: 530px;
+	padding: 5px 10px;
+}
+
+
+/* PAGE CSS */
+
+
+body.page #main {
+	background: url(../images/content-bg.jpg) 0px top no-repeat;
+	overflow:hidden;
+	position:relative;
+}
+
+body.page #listArticles {
+	margin:15px 0;
+}
+
+body.page #listArticles ul.elements {
+	border:1px solid #999999;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	margin:0 15px;
+}
+
+body.page #listArticles ul.elements li:first-child {
+	-webkit-border-top-right-radius: 10px;
+	-webkit-border-top-left-radius: 10px;
+	-moz-border-radius-topright: 10px;
+	-moz-border-radius-topleft: 10px;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+}
+
+body.page #listArticles ul.elements li:last-child {
+	-webkit-border-bottom-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-radius-bottomright: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+
+body.page #listArticles ul.elements img {
+	float: left;
+	margin:0 10px;
+}
+
+body.page #listArticles ul.elements .markdown {
+	float:left;
+	width:590px;
+}
+
+body.page #listArticles ul.elements li {
+	
+	clear:left;
+	height:100px;
+	padding:10px 0;
+	width:770px;
+	background: #efefef url(../images/list-shadow.png) bottom center repeat-x;
+}
+
+
+body.page #listArticles div.pager {
+	width: 100%;
+	height:18px;
+	text-align: center;
+}
+
+body.page #listArticles div.pager li {
+	
+	background:none repeat scroll 0 0 #efefef;
+	border:1px solid #999;
+	float:left;
+	margin:0 -1px;
+	padding:2px 8px;
+}
+
+body.page #listArticles div.pagerBottom {
+	margin:-1px 0 0;
+}
+
+body.page #listArticles div.pagerTop li:first-child {
+	-moz-border-radius:14px 0 0 0;
+	border-radius:14px 0 0 0;
+}
+
+body.page #listArticles div.pagerTop li:last-child {
+	-moz-border-radius:0 14px 0 0;
+	border-radius:0 14px 0 0;
+}
+
+body.page #listArticles div.pagerBottom li:first-child {
+	-moz-border-radius:0 0 0 14px;
+	border-radius:0 0 0 14px;
+}
+
+body.page #listArticles div.pagerBottom li:last-child {
+	-moz-border-radius:0 0 14px 0;
+	border-radius:0 0 14px 0;
+}
+
+
+/* CURSUS PAGE CSS */
+
+body.page_main_cursus #dm_content {
+	padding: 10px 20px;
+}
+
+
+body.page .skill_list {
+}
+
+body.page .skill_list .skills-bloc {
+	float: left;
+	padding:0 10px;
+}
+
+body.page .skill_list h2 {
+	clear: both;
+	margin: 10px 0 5px 0;
+	font-size: 14px;
+}
+
+body.page .skills .spacer {
+	display: block;
+	float: left;
+	width: 100px;
+}
+
+body.page .skills li {
+	clear: both;
+	font-size:12px;
+}
+
+
+body.page .skills .skillbar {
+	height: 25px;
+	float:left;
+}
+
+body.page .skills .skillbar.off {
+		width: 128px;
+		background-image: url(../images/progressoff.png);
+		background-repeat: no-repeat;
+}
+
+body.page .skills .skillbar.on {
+		width: 0px;
+		background: url(../images/progresson.png) 0px 0px no-repeat;
+}
+
+body.page .links  {
+	background:none repeat scroll 0 0 #FAFAFA;
+	border:1px solid #999999;
+	-webkit-border-radius:6px 6px 6px 6px;
+	-moz-border-radius:6px 6px 6px 6px;
+	border-radius:6px 6px 6px 6px;
+	padding:10px 0 5px 15px;
+	position:absolute;
+	right:10px;
+	top:-8px;
+	width: inherit;
+}
+
+body.page .links .dm_widget {
+	float: left;
+}
+
+body.page .icon {
+	display: block;
+	padding: 0 15px 0 20px;
+	height: 16px;
+}
+
+body.page a.download {
+	background: url(../images/download.png) 0px 0px no-repeat; 
+}
+
+body.page a.print {
+	background: url(../images/print.png) 0px 0px no-repeat; 
+}
+
+body.page .back {
+	background: url(../images/back.png) 0px 0px no-repeat; 
+	height:32px;
+	line-height:16px;
+	margin:10px 15px;
+	padding:0 15px 0 25px;
+}
+
+body.page table {
+	clear: both;
+}
+
+body.page table h2 {font-size: 16px;}
+body.page table h3 {font-size: 14px;}
+
+body.page caption, 
+body.page thead th {
+	display: none;
+}
+
+body.page tbody td.years {
+	font-size:2em;
+	margin:10px 0 0;
+	text-align:center;
+	vertical-align:middle;
+	width:180px;
+}
+
+
+body.page tbody .related {
+	width: 200px;
+}
+
+body.page tbody .descriptions {
+	width: 560px;
+	padding:10px;
+}
+
+body.page tbody tr {	
+	background:  url(../images/tr-list-shadow.png) center bottom  no-repeat;
+	display:block;
+	padding:10px 0 0;
+}
+
+body.page tbody tr.details {
+	background: #F6F6F6;
+}
+
+
+body.page tbody .descriptions p {
+	margin: 5px 0;
+}
+
+
+body.page tbody .descriptions li,
+body.page tbody .projects li,
+body.page tbody .subjects li {
+	background:url(../images/arrow.png) no-repeat scroll 8px 0 transparent;
+	font-size:12px;
+	margin:0 0 4px;
+	padding:0 0 0 24px;
+	list-style: none outside none;
+}
+
+body.page tbody .descriptions li{
+	float: left;
+}
+
+body.page tbody .descriptions h3{
+	clear:both;
+	padding:5px 0 0;
+}
+
+body.page tbody .diplomas li {
+	background:url(../images/diploma.png) no-repeat scroll 2px 2px transparent;
+	font-size:14px;
+	padding:0 0 5px 24px;
+}
+
+
+
+body.page tbody .related h3 {
+	margin: 10px 0 2px 0;	
+}
+
+body.page tbody .related .pro {
+	background:url(../images/folder.png) no-repeat scroll 2px 0px transparent;
+	padding:0 0 0 24px;
+}
+
+body.page tbody .related .sub {
+	background:url(../images/tag.gif) no-repeat scroll 2px 0px transparent;
+	padding:0 0 0 24px;
+}

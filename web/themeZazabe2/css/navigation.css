@@ -1,0 +1,57 @@
+#banner {
+	height: 72px;
+	background: url(../images/head-bg.jpg) repeat-x bottom center;
+	position: relative;
+}
+
+#banner .clearfix {
+	display: block;
+}
+
+
+#menu {
+	position: relative;
+	margin: 0 auto 0 auto;
+	width: 728px;
+	height: 47px;
+	background: url(../images/menu-bg.jpg) no-repeat left bottom;
+}
+
+
+#menu li {
+	font-size: 20px;
+	padding:0 20px;
+	font-weight: bold;
+	height: 47px;
+	text-align: center;
+	
+}
+
+
+#menu ul li {
+	float: left;
+	text-indent: 10px;
+}
+
+
+#menu li span,
+#menu a, 
+#menu a:active {
+	line-height:40px;
+	text-decoration: none;
+	color: #bec3c8;
+	letter-spacing: 10px;
+}
+
+#menu a:hover {
+	color: #38424b;
+}
+
+#menu li span {
+	color: #71808f;
+}
+
+
+
+#menu ul {
+}

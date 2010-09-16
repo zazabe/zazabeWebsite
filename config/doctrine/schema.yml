@@ -1,0 +1,79 @@
+Article:  
+  actAs:  
+    DmGallery:
+    DmSortable:  
+    DmTaggable:
+    DmCommentable:
+    NestedSet:
+      hasManyRoots: true
+      rootColumnName: root_id
+      
+    I18n:  
+      fields:         [ title, extract, body, is_active ]  
+      actAs:  
+        Timestampable:  
+        DmVersionable:  
+  columns:  
+    id:               { type: integer(4), autoincrement: true, primary: true }
+    title:            { type: string(120), notnull: true }  
+    extract:          { type: string(2000), notnull: true }
+    body:             { type: clob, extra: markdown }  
+    author:           { type: integer, notnull: true }  
+    is_active:        { type: boolean, notnull: true, default: false }  
+  relations:  
+    Author:  
+      class: DmUser  
+      local: author  
+      foreignAlias:   Articles  
+      
+    Skills:
+      foreignAlias:   Skills
+      class:          Skill
+      refClass:       ArticleSkill
+
+      
+ 
+Skill:  
+  actAs:  
+    DmSortable:
+    NestedSet:
+      hasManyRoots: true
+      rootColumnName: root_id
+      
+    I18n:  
+      fields:         [ name ]  
+      actAs:  
+        Timestampable:  
+        
+  columns:  
+    id:               { type: integer(4), autoincrement: true, primary: true }
+    name:             { type: string(200), notnull: true }  
+    experience:       { type: integer(1), notnull: true }
+  
+  relations:
+    Articles:
+      foreignAlias: Articles
+      class:        Article
+      refClass:     ArticleSkill
+  
+
+ArticleSkill:
+
+  columns:
+    article_id:
+      type: integer(4)
+      primary: true
+    skill_id:
+      type: integer(4)
+      primary: true
+  relations:
+    Article:
+      class: Article
+      local: article_id
+      onDelete: CASCADE
+      foreignAlias: ArticlesSkills
+    Skill:
+      class: Skill
+      local: skill_id
+      onDelete: CASCADE
+      foreignAlias: ArticlesSkills    
