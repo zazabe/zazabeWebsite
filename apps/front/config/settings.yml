@@ -32,8 +32,6 @@ all:
 
     # Enable the database manager
     use_database:           true
-    
-    standard_helpers:         [Partial, Cache, za]
 
   .actions:
   
@@ -45,5 +43,3 @@ all:
 
     error_404_module:       dmFront   # To be called when a 404 error is raised
     error_404_action:       error404  # Or when the requested URL doesn't match any route
-    
-    

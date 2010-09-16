@@ -1,0 +1,22 @@
+<?php
+
+require_once '/home/zazabe/www/michel-meyer.fr/lib/vendor/diem/dmCorePlugin/lib/core/dm.php';
+dm::start();
+
+class ProjectConfiguration extends dmProjectConfiguration
+{
+
+  public function setup()
+  {
+    parent::setup();
+    
+    $this->enablePlugins(array(
+      		'dmWidgetTwitterPlugin',
+		'dmTagPlugin',
+		'dmCommentPlugin'  
+    ));
+
+    $this->setWebDir(sfConfig::get('sf_root_dir').'/web');
+  }
+  
+}

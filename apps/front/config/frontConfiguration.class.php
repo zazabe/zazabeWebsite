@@ -4,7 +4,7 @@ require_once(dm::getDir().'/dmFrontPlugin/lib/config/dmFrontApplicationConfigura
 
 class frontConfiguration extends dmFrontApplicationConfiguration
 {
-	public function configure()
-	{
-	}
+  public function configure()
+  {
+  }
 }
