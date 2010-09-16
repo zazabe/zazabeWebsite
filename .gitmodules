@@ -1,0 +1,9 @@
+[submodule "plugins/dmTagPlugin"]
+	path = plugins/dmTagPlugin
+	url = git://github.com/diem-project/dmTagPlugin.git
+[submodule "plugins/dmWidgetTwitterPlugin"]
+	path = plugins/dmWidgetTwitterPlugin
+	url = git://github.com/ornicar/dmWidgetTwitterPlugin.git
+[submodule "plugins/dmCommentPlugin"]
+	path = plugins/dmCommentPlugin
+	url = git://github.com/ornicar/dmCommentPlugin.git
