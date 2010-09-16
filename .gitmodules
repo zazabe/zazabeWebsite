@@ -7,3 +7,6 @@
 [submodule "plugins/dmCommentPlugin"]
 	path = plugins/dmCommentPlugin
 	url = git://github.com/ornicar/dmCommentPlugin.git
+[submodule "lib/vendor/diem"]
+	path = lib/vendor/diem
+	url = git://github.com/diem-project/diem.git
