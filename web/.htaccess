@@ -34,6 +34,7 @@ Options +FollowSymLinks +ExecCGI
   
   RewriteCond %{HTTP_HOST} !^www\.michel-meyer\.fr$
   RewriteCond %{HTTP_HOST} !^zazabe\.mm$
+  RewriteCond %{REMOTE_ADDR} !^94\.23\.32\.187$
   RewriteRule ^(.*)$ http://www.michel-meyer.fr/$1 [R=301]
 
 
