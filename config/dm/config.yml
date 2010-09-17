@@ -34,7 +34,7 @@ dev:
 all:
 
   i18n:
-    cultures:             [ 'fr', en' ]        # Available cultures
+    cultures:             [ 'en' ]        # Available cultures
       
     
   orm:                                  # Doctrine configuration

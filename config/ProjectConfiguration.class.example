@@ -13,7 +13,8 @@ class ProjectConfiguration extends dmProjectConfiguration
     $this->enablePlugins(array(
       	'dmWidgetTwitterPlugin',
 		'dmTagPlugin',
-		'dmCommentPlugin'  
+		'dmCommentPlugin',
+'sfDoctrineNestedSetPlugin'  
     ));
     
     $this->setWebDir(sfConfig::get('sf_root_dir').'/web');
