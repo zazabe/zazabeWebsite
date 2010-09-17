@@ -26,7 +26,7 @@ echo _open('div#relative');
 	  
 	  echo _tag('h2', __('Pictures'));  
 	  
-	  echo _open('ul');
+	  echo _open('ul.picture');
 	  foreach($article->getDmGallery() as $media){
 	    echo _tag('li',
 	              _link($media)->set('.colorbox rel=article')->text( _media($media)->size(160, 130)->method('fit'))
@@ -36,6 +36,6 @@ echo _open('div#relative');
   
 	echo _close('div');  
 	
-	echo _tag('div#relSwitcher', 'open/close');
+	echo _link('#')->set('#relSwitcher.open')->text('open/close');
   
 echo _close('div');

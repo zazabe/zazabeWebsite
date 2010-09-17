@@ -43,7 +43,6 @@ body.home #left h2 {
 
 /* ARTICLE CSS */
 
-body.article { }
 
 
 body.article h4,
@@ -58,6 +57,16 @@ body.article #footer {
 	bottom: 0px;
 }
 
+
+body.article #main ul li {
+	background:url(../images/arrow.png) no-repeat scroll 8px 0 transparent;
+	font-size:12px;
+	margin:0 0 4px;
+	padding:0 0 0 24px;
+	list-style: none outside none;
+}
+
+
 body.article p  { margin: 5px 0 0;} 
 
 body.article #main h1 {
@@ -66,10 +75,11 @@ body.article #main h1 {
 }
 
 
+
 body.article #relative {
 	background: url(../images/content-left.png) right top  no-repeat;
 	padding:10px;
-	width:225px;
+	width:30px;
 	min-height: 450px;
 	float: left;
 	position: relative;
@@ -81,11 +91,38 @@ body.article #relContent {
 	overflow: hidden;
 }
 
-body.article #relSwitcher {
-	position: absolute;
-	right: 5px;
-	top: 5px;
+
+body.article #relContent .picture li {
+	background: none;
+	margin:0 ;
+	padding:0;
+	list-style: none;
 }
+
+body.article #relSwitcher {
+	display: block;
+	position: absolute;
+	right: 15px;
+	top: 15px;
+	width: 16px;
+	height: 16px;
+	overflow: hidden;
+	text-indent: -2000px;
+	background: url(../images/bt-close.png) 0px 0px no-repeat;
+}
+
+body.article #relSwitcher:hover {
+	background: url(../images/bt-close-hover.png) 0px 0px no-repeat;
+}
+
+body.article #relSwitcher.open {
+	background: url(../images/bt-open.png) 0px 0px no-repeat;
+}
+
+body.article #relSwitcher.open:hover {
+	background: url(../images/bt-open-hover.png) 0px 0px no-repeat;
+}
+
 
 
 
@@ -99,7 +136,7 @@ body.article #relative a.colorbox {
 
 body.article #article {
 	float: right;
-	width: 530px;
+	width: 730px;
 	padding: 5px 10px;
 }
 
@@ -237,6 +274,8 @@ body.page .skills li {
 }
 
 
+
+
 body.page .skills .skillbar {
 	height: 25px;
 	float:left;
@@ -343,7 +382,6 @@ body.page tbody .projects li,
 body.page tbody .subjects li {
 	background:url(../images/arrow.png) no-repeat scroll 8px 0 transparent;
 	font-size:12px;
-	margin:0 0 4px;
 	padding:0 0 0 24px;
 	list-style: none outside none;
 }

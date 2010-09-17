@@ -33,6 +33,7 @@ Options +FollowSymLinks +ExecCGI
   # getting no_script_name to work
   
   RewriteCond %{HTTP_HOST} !^www\.michel-meyer\.fr$
+  RewriteCond %{HTTP_HOST} !^zazabe\.mm$
   RewriteRule ^(.*)$ http://www.michel-meyer.fr/$1 [R=301]
 
 

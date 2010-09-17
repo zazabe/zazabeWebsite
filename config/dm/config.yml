@@ -1,8 +1,5 @@
-all:
+prod:
 
-  i18n:
-    cultures:             [ 'fr', en' ]        # Available cultures
-      
   cache:
     apc:                  true          # (RECOMMENDED) Use Apc if available
     
@@ -17,6 +14,28 @@ all:
       
   css:
     compress:             true          # (RECOMMENDED) Performance : Minifies stylesheets and put them into a single compressed file
+
+
+dev:
+
+  cache:
+    apc:                  false
+    
+  js:
+    compress:             false
+    cdn:
+      enabled:            false
+    head_inclusion:       [ ] 
+                              
+  css:
+    compress:             false
+
+
+all:
+
+  i18n:
+    cultures:             [ 'fr', en' ]        # Available cultures
+      
     
   orm:                                  # Doctrine configuration
                                         # More configuration : please use ProjectConfiguration::configureDoctrine* methods

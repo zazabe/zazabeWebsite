@@ -25,7 +25,7 @@ class articleComponents extends myFrontModuleComponents
     public function executeListCursus()
 	{
 		$query = $this->getListQuery('article')
-                      ->addWhere('article.level = ?', 1);   
+                      ->addWhere('article.root_id = 21 AND article.level = ?', 1);   
 
 		$this->articlePager = $this->getPager($query);
 	}

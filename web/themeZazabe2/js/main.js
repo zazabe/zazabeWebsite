@@ -48,28 +48,34 @@ $(document).ready(function(){
 		if(relswitcher.length > 0){
 			var relcontent = $('#relContent'), relative = $('#relative'),  article = $('#article');
 			var relWidth = {
-					from: {
-						relcontent: relcontent.width(),
-						relative  : relative.width(),
-						article   : article.width()
-					},
 					to: {
+						relcontent: 125 /*relcontent.width()*/,
+						relative  : 225 /*relative.width()*/,
+						article   : 530 /*article.width()*/
+					},
+					from: {
 						relcontent: 0,
 						relative  : 30,
 						article   : 730
 					}
 			};
-			
+			relswitcher.addClass('open');
 			relswitcher.click(function(){
-				if(relcontent.width() > relWidth.to.relcontent){
-					relcontent.animate({width : relWidth.to.relcontent});
-					relative.animate({  width : relWidth.to.relative});
-					article.animate({   width : relWidth.to.article});
+				if(relswitcher.hasClass('open')){
+					
+					//relcontent.animate({width : relWidth.to.relcontent});
+					relative.animate({  width : relWidth.to.relative}, 3000, 'easeOutBounce', function() {
+					  relswitcher.removeClass('open');
+					});
+					article.animate({   width : relWidth.to.article}, 1000, 'linear');
+					
 				}
 				else {
-					relcontent.animate({width : relWidth.from.relcontent});
-					relative.animate({  width : relWidth.from.relative});
-					article.animate({   width : relWidth.from.article});
+					//relcontent.animate({width : relWidth.from.relcontent});
+					relative.animate({  width : relWidth.from.relative}, 1000, 'linear');
+					article.animate({   width : relWidth.from.article}, 1000, 'linear', function() {
+					  relswitcher.addClass('open');
+					});
 				}
 			});
 		}

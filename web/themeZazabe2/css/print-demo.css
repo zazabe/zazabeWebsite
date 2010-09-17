@@ -4,7 +4,7 @@ body.print {
 	width: 100%;
 }
 
-body.page_main_cursus #dm_content {
+body.print #dm_content {
 	padding: 0px;
 }
 

@@ -4,8 +4,8 @@ require_once(dm::getDir().'/dmAdminPlugin/lib/config/dmAdminApplicationConfigura
 
 class adminConfiguration extends dmAdminApplicationConfiguration
 {
-	public function configure()
-	{
-
-	}
+  public function configure()
+  {
+    
+  }
 }
