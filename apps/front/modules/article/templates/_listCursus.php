@@ -14,7 +14,7 @@ echo '
 	
     foreach($articlePager as $article){
        echo _open('tr');   
-         echo _tag('td.years', _tag('strong', $article->getCursusDate()));   
+         echo _tag('td.years'.($article->hasCursusDiplomas() ? '.school' : '.work'), _tag('strong', $article->getCursusDate()));   
          echo _open('td');
          echo _tag('h2',  $article->getCursusName());
          

@@ -346,6 +346,15 @@ body.page thead th {
 	display: none;
 }
 
+body.page tbody td.school {
+	background:url("../images/school.png") no-repeat scroll left center transparent;
+}
+
+body.page tbody td.work {
+	background:url("../images/work.png") no-repeat scroll left center transparent;
+}
+
+
 body.page tbody td.years {
 	font-size:2em;
 	margin:10px 0 0;
