@@ -67,7 +67,7 @@ class Article extends BaseArticle
   public function hasCursusDiplomas(){
     $this->initCursus();
     
-    return !(empty($this->cursus['diplomas']) || $this->cursus['diplomas'] == 'none');
+    return !(empty($this->cursus['diplomas']) || $this->getExtract() != 'none');
   }
   
   public function getCursusName(){
