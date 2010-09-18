@@ -54,15 +54,13 @@ class articleComponents extends myFrontModuleComponents
     
     protected function getListProjectsQuery(){
       return $this->getListQuery('article')
-                    ->addWhere('article.level > ?', 1)
-                    ->orWhere('article.level >= 1 and article.root_id = 25');   
+                    ->addWhere('article.level > ?', 1);   
     	
     }
     
     protected function getShowProjectsQuery(){
       return $this->getShowQuery('article')
-                    ->addWhere('article.level > ?', 1)
-                    ->orWhere('article.level >= 1 and article.root_id = 25');   
+                    ->addWhere('article.level > ?', 1);   
     }
     
     

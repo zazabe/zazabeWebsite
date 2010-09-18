@@ -377,6 +377,7 @@ body.page tbody tr {
 	background:  url(../images/tr-list-shadow.png) center bottom  no-repeat;
 	display:block;
 	padding:10px 0 0;
+	min-height:40px;
 }
 
 body.page tbody tr.details {
