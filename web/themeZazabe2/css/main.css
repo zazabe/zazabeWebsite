@@ -69,6 +69,14 @@ body.article #main ul li {
 
 body.article p  { margin: 5px 0 0;} 
 
+body.article p.done-date {
+	color:#999999;
+	font-size:2em;
+	position:absolute;
+	right:10px;
+	top:5px;
+}
+
 body.article #main h1 {
 	text-indent: 20px;
 	font-size: 3.1em;

@@ -3,6 +3,8 @@ echo _tag('h1', $article);
   
 echo _open('div#article');
 
+echo _tag('p.done-date', date('F Y', strtotime($article->done_on))  );  
+
 echo markdown($article->body, '.article-body');  
 
 echo _close('div');

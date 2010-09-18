@@ -49,18 +49,6 @@ a, a:visited, a:active {
 }
 	
 
-.main_footer {
-	border-radius:5px 5px 0 0;
-	-moz-border-radius:5px 5px 0 0;
-	background:-moz-radial-gradient(#AEDAE5, #D8EDF2) repeat scroll 0 0 transparent;
-	border:1px solid #76AADB;
-	margin:10px 0 0;
-	padding:2px 10px;
-}
-
-.main_footer p {
-	text-align: center;
-}
 .main {
 	height: 100%;
 	position: relative;
@@ -78,4 +66,9 @@ a, a:visited, a:active {
 
 .content_title {
 	clear:both;
+}
+
+.videos {
+    margin: 10px 0;
+    text-align:center;
 }

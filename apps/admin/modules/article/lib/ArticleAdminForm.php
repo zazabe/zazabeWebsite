@@ -39,7 +39,7 @@ class ArticleAdminForm extends BaseArticleForm
 
     
     $this->useFields(array(
-    'title', 'is_active', 'author', 'parent', 'body', 'extract'
+    'title', 'is_active', 'author', 'parent', 'body', 'extract', 'done_on'
     ));
     
     

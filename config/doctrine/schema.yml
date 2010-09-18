@@ -20,6 +20,7 @@ Article:
     body:             { type: clob, extra: markdown }  
     author:           { type: integer, notnull: true }  
     is_active:        { type: boolean, notnull: true, default: false }  
+    done_on:          { type: date, notnull: false}
   relations:  
     Author:  
       class: DmUser  

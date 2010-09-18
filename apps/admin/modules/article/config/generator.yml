@@ -39,10 +39,11 @@ generator:
           - is_active
           - created_at
           - updated_at
+          - done_on
           
       form:
         display:
-          NONE: [title, is_active, author, parent]
+          NONE: [title, is_active, author, parent, done_on]
           Body: [body]
           Gallery: [dm_gallery]
           Others: [extract, tags]
