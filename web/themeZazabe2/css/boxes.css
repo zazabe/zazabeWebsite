@@ -22,6 +22,10 @@
 	font-size: 0.7em;
 }
 
+#boxes div.extract {
+	display: none;
+}
+
 #boxes li a.pic {
 	display: block;
 	width: 160px;

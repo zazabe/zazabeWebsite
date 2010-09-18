@@ -87,8 +87,8 @@ body.article #relative {
 
 
 body.article #relContent {
-	margin:0px 50px;
-	overflow: hidden;
+	margin:0 50px 0 30px;
+	opacity: 0;
 }
 
 
@@ -121,13 +121,6 @@ body.article #relSwitcher.open {
 
 body.article #relSwitcher.open:hover {
 	background: url(../images/bt-open-hover.png) 0px 0px no-repeat;
-}
-
-
-
-
-body.article #relative h2 {
-	line-height: 2.5em;
 }
 
 body.article #relative a.colorbox {

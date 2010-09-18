@@ -3,25 +3,28 @@ dp.SyntaxHighlighter.HighlightAll('code');
 
 
 var box = null;
+var qtipOptions = {
+	position: {
+		corner: {
+			target: 'topCenter',
+			tooltip: 'bottomLeft'
+		}
+	},
+	style: {
+		name: 'cream',
+		padding: '7px 13px',
+		tip: 'bottomLeft',
+		width: {
+			max: 250,
+			min: 0
+		}
+	}
+};
+
 var skillOptions = {
 	tip: {
-		options: {
-	  	  position: {
-            corner: {
-              target: 'topCenter',
-              tooltip: 'bottomLeft'
-            }
-	      },
-	      style: {
-	        name: 'cream',
-	        padding: '7px 13px',
-	        width: {
-	          max: 250,
-	          min: 0
-            },
-	        tip: true
-	      }
- 	    }
+		options: qtipOptions,
+		tip: true
 	},
 	animation: {
 		duration: 3000,
@@ -40,6 +43,24 @@ $(document).ready(function(){
 				height:   ($('#boxes li').outerHeight(true)*3)
 			});
 		  	box = new boxes({effect: 'easeInElastic', duration: 3000, interval: 4000});
+			
+			
+			$('#boxes li').each(function(){
+				$('a.pic', this).removeAttr('title');
+				$('a.pic', this).qtip($.extend( qtipOptions, {
+					position: {
+						corner: {
+							target: 'leftMiddle',
+							tooltip: 'rightMiddle'
+						}
+					},
+					style: {
+						name: 'cream',
+						padding: '7px 13px',
+						tip: 'rightMiddle'
+					},
+					content: $('div.extract', this).html()}));
+			});
 		}
 		
 		// PAGE INIT
@@ -63,20 +84,24 @@ $(document).ready(function(){
 			relswitcher.click(function(){
 				if(relswitcher.hasClass('open')){
 					
-					//relcontent.animate({width : relWidth.to.relcontent});
 					relative.animate({  width : relWidth.to.relative}, 3000, 'easeOutBounce', function() {
 					  relswitcher.removeClass('open');
 					});
-					article.animate({   width : relWidth.to.article}, 1000, 'linear');
+					article.animate({   width : relWidth.to.article}, 1000, 'linear', function(){
+					  setTimeout(function(){
+					  	relcontent.animate({opacity : 1}, 2000);	
+					  }, 1000);
+					});
 					
 				}
 				else {
-					//relcontent.animate({width : relWidth.from.relcontent});
+					relcontent.animate({opacity : 0}, 300);	
 					relative.animate({  width : relWidth.from.relative}, 1000, 'linear');
 					article.animate({   width : relWidth.from.article}, 1000, 'linear', function() {
 					  relswitcher.addClass('open');
 					});
 				}
+				return false;
 			});
 		}
 		

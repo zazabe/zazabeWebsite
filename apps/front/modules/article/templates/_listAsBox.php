@@ -21,6 +21,7 @@ foreach ($articlePager as $article)
  
     echo _link($article)->set('.pic')->text(_media($article->getFirstMedia())->size(160, 100)->method('fit')->background('#fafafa'));  
     
+    echo markdown($article->extract, '.extract');  
     // in a P tag, we put some infos about the article  
     /*
     echo _tag('p.article_infos',  

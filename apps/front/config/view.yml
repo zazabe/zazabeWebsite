@@ -43,7 +43,6 @@ default:
     - /themeZazabe2/js/main.js
     
     - /themeZazabe2/js/browser-warning.min.js
-    - http://download.skype.com/share/skypebuttons/js/skypeCheck.js
     
     
   has_layout:     true

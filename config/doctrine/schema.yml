@@ -77,3 +77,4 @@ ArticleSkill:
       local: skill_id
       onDelete: CASCADE
       foreignAlias: ArticlesSkills    
+      
