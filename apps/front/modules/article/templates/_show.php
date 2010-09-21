@@ -32,11 +32,13 @@ echo _open('div#relative');
 	  foreach($article->getDmGallery() as $media){
 	    
 
+         $test =  _media($media)->size(600, 450)->method('fit');  
+	      
           $imageTarget = $media->getWidth() > 600 || $media->getHeight() > 450  ?
-                                      _media($media)->size(600, 450)->method('fit')->getAbsoluteSrc() :
+                                     str_replace(' ', '%20', _media($media)->size(600, 450)->method('fit')->getSrc()) :
                                       $media;
                                    
-          
+          echo _tag('p', $imageTarget);
 	      echo _tag('li',
 	                              _link($imageTarget)
                                      ->set('.colorbox rel=article')
