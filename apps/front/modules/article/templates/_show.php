@@ -34,7 +34,10 @@ echo _open('div#relative');
 
 
 	      echo _tag('li',
-	              _link( _media($media)->size(600, 450)->method('fit')->getAbsoluteSrc())->set('.colorbox rel=article')->text( _media($media)->size(160, 130)->method('fit'))
+	              _link( _media($media)->size(600, 450)->method('fit')->getAbsoluteSrc())
+	                                                 ->set('.colorbox rel=article')
+	                                                 ->text( _media($media)->size(160, 130)->method('fit'))
+	                                                 ->title($media->legend)
 	         );
 	  }
 	  echo _close('ul');
