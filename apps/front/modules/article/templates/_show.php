@@ -32,12 +32,16 @@ echo _open('div#relative');
 	  foreach($article->getDmGallery() as $media){
 	    
 
-
+          $imageTarget = $media->getWidth() > 600 || $media->getHeight() > 450  ?
+                                      _media($media)->size(600, 450)->method('fit')->getAbsoluteSrc() :
+                                      $media;
+                                   
+          
 	      echo _tag('li',
-	              _link( _media($media)->size(600, 450)->method('fit')->getAbsoluteSrc())
-	                                                 ->set('.colorbox rel=article')
-	                                                 ->text( _media($media)->size(160, 130)->method('fit'))
-	                                                 ->title($media->legend)
+	                              _link($imageTarget)
+                                     ->set('.colorbox rel=article')
+                                     ->text( _media($media)->size(160, 130)->method('fit'))
+                                     ->title($media->legend)
 	         );
 	  }
 	  echo _close('ul');
