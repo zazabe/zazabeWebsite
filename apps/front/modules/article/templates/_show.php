@@ -38,7 +38,7 @@ echo _open('div#relative');
                                      str_replace(' ', '%20', _media($media)->size(600, 450)->method('fit')->getSrc()) :
                                       $media;
                                    
-          echo _tag('p', $imageTarget);
+          
 	      echo _tag('li',
 	                              _link($imageTarget)
                                      ->set('.colorbox rel=article')
