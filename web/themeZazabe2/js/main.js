@@ -42,7 +42,7 @@ $(document).ready(function(){
 				width:     ($('#boxes li').outerWidth(true)*3),
 				height:   ($('#boxes li').outerHeight(true)*3)
 			});
-		  	box = new boxes({effect: 'easeInElastic', duration: 3000, interval: 4000});
+		  	box = new boxes({effect: 'easeInElastic', duration: 3000, interval: 10000});
 			
 			
 			$('#boxes li').each(function(){
