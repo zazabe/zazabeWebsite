@@ -35,7 +35,10 @@ echo '
            
            echo _tag('h3.pro', __('Projects:'));
            echo _open('ul.projects');
-             foreach($article->getChildrenProjects() as $project){echo _tag('li', _link($project));};
+             foreach($article->getNode()->getDescendants() as $project){
+                 $class = $project->level > 2 ? '.subprojects' : '';
+                 echo _tag('li'.$class, _link($project));
+             };
            echo _close('ul');
            
            echo _tag('h3.sub', __('Subjects:'));

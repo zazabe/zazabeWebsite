@@ -131,8 +131,21 @@ body.article #relSwitcher.open:hover {
 	background: url(../images/bt-open-hover.png) 0px 0px no-repeat;
 }
 
-body.article #relative a.colorbox {
+body.article #relative p.parent_project {
+	font-size: 1.2em;
+}
 
+body.article #relative a.colorbox img {
+	border: 8px solid #ddd;
+	opacity:0.8;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+body.article #relative a.colorbox img:hover {
+	border: 8px  solid #aaa;
+	opacity:1;
 }
 
 body.article #article {
@@ -406,6 +419,14 @@ body.page tbody .subjects li {
 	padding:0 0 0 24px;
 	list-style: none outside none;
 }
+
+body.page tbody .projects li.subprojects {
+	background: none;
+	list-style:disc inside none;
+	padding:0 0 0 30px;
+}
+
+
 
 body.page tbody .descriptions li{
 	float: left;
