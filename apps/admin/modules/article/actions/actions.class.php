@@ -14,6 +14,8 @@ require_once dirname(__FILE__).'/../lib/articleGeneratorHelper.class.php';
 class articleActions extends autoArticleActions
 {
   
+
+	
   public function executeDelete(sfWebRequest $request)
   {
     
@@ -66,37 +68,7 @@ class articleActions extends autoArticleActions
   }
   
   
-  public function executeResetTree(){
-  
-    $resetQuery = "UPDATE `zazabe`.`article` SET `root_id` = NULL ,`lft` = NULL ,`rgt` = NULL ,`level` = NULL";
-    
-    
-    $q = Doctrine_Query::create()
-        ->update('Article a')
-        ->set('a.root_id', 'NULL')
-        ->set('a.lft', 'NULL')
-        ->set('a.rgt', 'NULL')
-        ->set('a.level', 'NULL')
-        ->execute();
-    
-     
-    $q = Doctrine_Query::create()
-          ->from('Article a');
-    $articles = $q->execute();
-    $firstArticle = $articles->getFirst();  
-      
-    $treeObject = Doctrine_Core::getTable('Article')->getTree();
-    $treeObject->createRoot($firstArticle);
-       
-    
-    $prevArticle = $firstArticle;
-    foreach($articles as $article){
-      if($article->getId() != $firstArticle->getId()){
-        $article->getNode()->insertAsLastChildOf($prevArticle);
-        $prevArticle = $article;
-      }
-    }
-    
-    return sfView::NONE;
+  public function executeAll(){
+  	$this->articles = Doctrine_Core::getTable('Article')->findAll();
   }
 }
