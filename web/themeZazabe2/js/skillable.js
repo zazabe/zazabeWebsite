@@ -48,8 +48,8 @@ var skillable = function (element, options){
 	this.options.tip = $.extend({
 		enable: true,
 		options: {},
-		levelName: ['know the name', 'try one time', 'use sometimes', 'confiant', 'expert'],
-		sentence: 'my feeling about %%skillName%% : %%experienceName%%'
+		levelName: ['tried', 'use sometimes', 'often used', 'confident', 'expert'],
+		sentence: '%%experienceName%%'
 	}, options.tip);
 	
 	this.options.printable = $.extend({
