@@ -72,3 +72,7 @@ a, a:visited, a:active {
     margin: 10px 0;
     text-align:center;
 }
+
+.dm_tag_popular em {
+	font-size: 1.2em;
+}
