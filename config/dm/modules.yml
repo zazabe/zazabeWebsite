@@ -18,6 +18,7 @@ Content:
         listCursus:
         listByTag:      { filters: dmTag }
         listBySkill:    { filters: Skill } 
+        listBlog:  
         listAsBox: 
         
     skill:

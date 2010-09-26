@@ -41,9 +41,15 @@ body.home #left h2 {
 	text-align: center;
 }
 
+/* BLOG CSS */
+
+body.home .blog-list {
+	padding: 10px 15px;
+	
+}
+
+
 /* ARTICLE CSS */
-
-
 
 body.article h4,
 body.article h3,
@@ -166,6 +172,7 @@ body.page #main {
 
 body.page #listArticles {
 	margin:15px 0;
+	padding: 0 15px;
 }
 
 body.page #listArticles ul.elements {
@@ -173,7 +180,6 @@ body.page #listArticles ul.elements {
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	border-radius: 10px;
-	margin:0 15px;
 }
 
 body.page #listArticles ul.elements li:first-child {
@@ -262,12 +268,30 @@ body.page #listArticles div.pagerBottom li:last-child {
 /* CURSUS PAGE CSS */
 
 body.page_main_cursus #dm_content {
-	padding: 10px 20px;
+	padding: 30px 20px;
 }
 
 
-body.page .skill_list {
+body.page .skill_list .level5 {
+	font-weight:bold;
+	font-size: 1.2em;
 }
+
+body.page .skill_list .level4 {
+	font-weight:bold;
+	font-size: 1.2em;
+}
+
+body.page .skill_list .level3 {
+	font-size: 1.1em;
+}
+
+body.page .skill_list h3 {
+	font-size: 1.5em;
+	margin: 0 0 10px 0;
+	border-bottom: 1px solid #999;
+}
+
 
 body.page .skill_list .skills-bloc {
 	float: left;

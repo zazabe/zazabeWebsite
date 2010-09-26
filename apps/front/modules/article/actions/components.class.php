@@ -30,6 +30,13 @@ class articleComponents extends myFrontModuleComponents
 		$this->articlePager = $this->getPager($query);
 	}
 	
+	public function executeListBlog()
+	{
+		$blogQuery = $this->getShowQuery('article')->where('article.id = ?', 25);
+		$blog = $this->getRecord($blogQuery);
+		$this->blogSubjects = $blog->getNode()->getChildren();
+	}	
+	
 	public function executeListBySkill()
     {  
       // $this->dmTag;  
@@ -39,10 +46,10 @@ class articleComponents extends myFrontModuleComponents
 	
 	public function executeListByTag()
     {  
-      // $this->dmTag;  
+      $this->tag = Doctrine_Core::getTable('dmTag')->find($this->getPage()->getRecordId());
       $query = $this->getListProjectsQuery();   
       $this->articlePager = $this->getPager($query);  
-      $this->tagName = $this->getRequestParameter('slug');
+     
     } 
 
 	public function executeListAsBox()
