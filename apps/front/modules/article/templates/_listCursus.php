@@ -37,7 +37,7 @@ echo '
            echo _open('ul.projects');
              foreach($article->getNode()->getDescendants() as $project){
                  $class = $project->level > 2 ? '.subprojects' : '';
-                 echo _tag('li'.$class, _link($project));
+                 echo $project->is_active ? _tag('li'.$class, _link($project)) : '';
              };
            echo _close('ul');
            
