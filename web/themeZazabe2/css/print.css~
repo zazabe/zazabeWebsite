@@ -1,41 +1,23 @@
 body.print {
 	background: none;
 	font-size: 12pt;
-	width: 100%;
-}
-
-body.print #dm_content {
-	padding: 0px;
-}
-
-
-body.print .content_image {
-  float: left;
+	width: 480pt;
 }
 
 
 body.print .contact {
-	float: right;
+	margin: 0 0 0 282pt;
 }
-
-body.print .video {
-	float: left;
-}
-
-body.print .contact img {
-	vertical-align: middle;
-	margin: 0 3px 0 0 ;
-}
-
 
 body.print tbody td {
+	width: 75%;
 }
 
 body.print h2 {
 	border-bottom:1px solid;
 	display:block;
 	font-size:20pt;
-	margin: 15px 0 10px;
+	margin:15px 0 0;
 }
 
 body.print .skills-bloc h2,
@@ -63,7 +45,7 @@ body.print tbody .descriptions li, body.print tbody .projects li, body.print tbo
 
 body.print tbody td.years {
 	font-size:14pt;
-	width: 170px;
+	width: 25%;
 }
 
 body.print .skills li {
@@ -79,10 +61,10 @@ body.print .skills .spacer {
 }
 
 body.print .skill_list .skills-bloc {
-	float: left;
-	margin:0 0 0 0;
-	padding:0;
-	width:25%;
+	float: none;
+	display: inline-table;
+	margin:0 5px 0 0;
+	padding: 0;
 }
 
 body.print .skills .skillbar {
@@ -125,24 +107,14 @@ body.print a.back {
 }
 
 
-body.print .skills {
-	font-size: 70%;
-}
-
-body.page .skill_list h3 {
-	font-size: 1em !important;
-}
-
 body.print .skills .skillbar.off {
 	height:15px;
 	margin:3px 0;
 	width:128px;
 }
 
-
-
-body.print tbody .descriptions h3 {
-	text-decoration: underline;
+body.print #sfWebDebug,
+body.print a.back {
+	display: none;
 }
-
 

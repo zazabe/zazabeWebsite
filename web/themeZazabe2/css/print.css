@@ -111,14 +111,31 @@ body.print a.back {
 }
 
 
+
+body.print #sfWebDebug,
+body.print a.back {
+	display: none;
+}
+
+
+
+body.print .skills {
+	font-size: 70%;
+}
+
+body.page .skill_list h3 {
+	font-size: 1em !important;
+}
+
 body.print .skills .skillbar.off {
 	height:15px;
 	margin:3px 0;
 	width:128px;
 }
 
-body.print #sfWebDebug,
-body.print a.back {
-	display: none;
+
+
+body.print tbody .descriptions h3 {
+	text-decoration: underline;
 }
 
