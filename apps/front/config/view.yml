@@ -4,7 +4,9 @@ default:
     content-type: text/html
 
   stylesheets:  
-    - /themeZazabe2/syntax-highlighter/css/syntax.css
+    - /themeZazabe2/syntax-highlighter/styles/shCore.css
+    - /themeZazabe2/syntax-highlighter/styles/shThemeDefault.css
+    - /themeZazabe2/css/redmond/jquery-ui.css
 
     - reset  
     - global
@@ -13,7 +15,7 @@ default:
     - colorbox  
 
     - main
-    
+
     - print-demo
     - print: { media: print }
     
@@ -22,24 +24,26 @@ default:
 
   javascripts:
     - /themeZazabe2/js/jquery-ui.js
-    - /themeZazabe2/js/jquery-image-loader.js
+    
+    - /themeZazabe2/syntax-highlighter/scripts/shCore.js
+    - /themeZazabe2/syntax-highlighter/scripts/shAutoloader.js
+    
+    - /themeZazabe2/syntax-highlighter/scripts/shBrushXml.js
+    - /themeZazabe2/syntax-highlighter/scripts/shBrushJScript.js
+    - /themeZazabe2/syntax-highlighter/scripts/shBrushPhp.js
+    - /themeZazabe2/syntax-highlighter/scripts/shBrushCss.js
+    
+    - /themeZazabe2/js/qcolor.js
+    - /themeZazabe2/js/qtime.js
+    - /themeZazabe2/js/qbox.js
+    
 
-    - /themeZazabe2/syntax-highlighter/js/shCore.js
-    - /themeZazabe2/syntax-highlighter/js/shBrushSql.js
-    - /themeZazabe2/syntax-highlighter/js/shBrushJScript.js
-    - /themeZazabe2/syntax-highlighter/js/shBrushPhp.js
-    - /themeZazabe2/syntax-highlighter/js/shBrushCss.js
-    - /themeZazabe2/syntax-highlighter/js/shBrushXml.js
-    - /themeZazabe2/syntax-highlighter/js/shBrushCpp.js
-
-
-    - /themeZazabe2/js/draw.js
-    - /themeZazabe2/js/boxes.js
     - /themeZazabe2/js/jquery-colorbox.js
     - /themeZazabe2/js/jquery-qtip.js
     - /themeZazabe2/js/skillable.js
     - /themeZazabe2/js/bg-printable.js
 
+    - /themeZazabe2/js/examples.js
     - /themeZazabe2/js/main.js
     
     - /themeZazabe2/js/browser-warning.min.js

@@ -19,16 +19,17 @@ echo _open('div#relative');
       }
 	
 	  if( $article->getNode()->hasChildren()){
-	      echo _tag('h2', __('Related'));  
-    	  
-	      echo _open('ul');
+	      $related = _open('ul');
 	      foreach($article->getNode()->getChildren() as $subprojects){
-    	     echo _tag('li',
-    	               _link($subprojects)
-    	         );
-    	  }
-    	  echo _close('ul');
-	  
+    	    if($subprojects->is_active){
+    	    	$related .=  _tag('li',
+    	               		_link($subprojects)
+    	         		);
+    	    }
+	      }
+    	  $related .= _close('ul');
+	  	  echo ($related != '<ul></ul>') ? _tag('h2', __('Related')).$related : '';
+	      
 	  }
 	  if($article->hasTags()){
 		  echo _tag('h2', __('Subjects'));  
@@ -57,7 +58,7 @@ echo _open('div#relative');
 	          
 		      echo _tag('li',_link($imageTarget)
                                      ->set('.colorbox rel=article')
-                                     ->text( _media($media)->size(160, 130)->method('fit')->background('#eeeeee'))
+                                     ->text( _media($media)->size(160, 130)->method('center'))
                                      ->title($media->legend)
 			  );
 		  }

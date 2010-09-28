@@ -1,1 +1,2 @@
 parameters:
+  markdown.class:             dmCustomMarkdown

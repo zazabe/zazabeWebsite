@@ -48,6 +48,21 @@ body.home .blog-list {
 	
 }
 
+body.home .blog-list h3 {
+	border-top: 1px solid #729ac9;
+	padding:10px 0;
+	clear: both;
+}
+
+body.home .blog-list .extract {
+	float:left;
+	width:380px;
+}
+
+body.home .blog-list .pic {
+	margin: 0 10px 10px 0;
+	float: left;
+}
 
 /* ARTICLE CSS */
 
@@ -70,6 +85,14 @@ body.article #main ul li {
 	margin:0 0 4px;
 	padding:0 0 0 24px;
 	list-style: none outside none;
+}
+
+body.article #main .ui-tabs ul li {
+	background: #fff;
+	font-size: 12px;
+	list-style:none outside none;
+	margin:0;
+	padding:0;
 }
 
 
@@ -103,6 +126,7 @@ body.article #relative {
 body.article #relContent {
 	margin:0 50px 0 30px;
 	opacity: 0;
+	display: none;
 }
 
 

@@ -4,6 +4,7 @@ Article:
     DmSortable:  
     DmTaggable:
     DmCommentable:
+
     NestedSet:
       hasManyRoots: true
       rootColumnName: root_id

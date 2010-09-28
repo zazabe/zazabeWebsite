@@ -19,7 +19,7 @@ foreach ($articlePager as $article)
     // show the article extract, processed with markdown  
     //echo markdown($article->extract, '.extract');  
  
-    echo _link($article)->set('.pic')->text(_media($article->getFirstMedia())->size(160, 100)->method('fit')->background('#fafafa'));  
+    echo _link($article)->set('.pic')->text(_media($article->getFirstMedia())->size(160, 100)->method('center'));  
     
     echo markdown($article->extract, '.extract');  
     // in a P tag, we put some infos about the article  

@@ -1,0 +1,5 @@
+ajax_article:
+  url:   /articles/ajax/:id
+  param: { module: article, action: ajax }
+  requirements:
+    id: \d+

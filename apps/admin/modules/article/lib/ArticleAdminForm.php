@@ -13,6 +13,7 @@ class ArticleAdminForm extends BaseArticleForm
   {
     parent::configure();
     
+    
     /*
     $this->setWidget('skills_list', new sfWidgetFormDoctrineChoice(array('multiple' => true, 
     																	 'model'    => 'Skill', 
@@ -56,6 +57,9 @@ class ArticleAdminForm extends BaseArticleForm
       'node'     => $this->getObject(),
     )));
     $this->getValidator('parent')->setMessage('node', 'A article cannot be made a descendent of itself.');
+
+  	
+  
   }
   
   
@@ -68,8 +72,9 @@ class ArticleAdminForm extends BaseArticleForm
         // save the record itself
     parent::doSave($con);
     
-    $test = 'toto';
-   // if a parent has been specified and if it's a different parent, add/move this node to be the child of that node
+    
+ 
+    // if a parent has been specified and if it's a different parent, add/move this node to be the child of that node
     if ($this->getValue('parent') )
     {
       $parent = Doctrine::getTable('Article')->findOneById($this->getValue('parent'));

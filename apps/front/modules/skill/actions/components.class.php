@@ -9,8 +9,9 @@ class skillComponents extends myFrontModuleComponents
 	public function executeList()
 	{
 		$query = $this->getListQuery('skill')
-					  ->where('skill.level = 0')
-					  ->orderBy('skill.position DESC');   
+				  	    ->where('skill.level = 0')
+					    ->orderBy('skill.experience DESC');
+					  
 		$this->skillPager = $this->getPager($query);
 
 	}

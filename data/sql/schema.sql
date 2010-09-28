@@ -2,6 +2,7 @@ CREATE TABLE article_translation_version (id INT, lang CHAR(2), title VARCHAR(12
 CREATE TABLE article_translation (id INT, title VARCHAR(120) NOT NULL, extract TEXT NOT NULL, body LONGTEXT, is_active TINYINT(1) DEFAULT '0' NOT NULL, lang CHAR(2), created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, version BIGINT, PRIMARY KEY(id, lang)) DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE = INNODB;
 CREATE TABLE article_dm_tag (id INT, dm_tag_id BIGINT, PRIMARY KEY(id, dm_tag_id)) DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE = INNODB;
 CREATE TABLE article_dm_media (id INT AUTO_INCREMENT, dm_media_id BIGINT NOT NULL, dm_record_id INT NOT NULL, position BIGINT, UNIQUE INDEX record_dm_media_idx (dm_record_id, dm_media_id), INDEX dm_media_id_idx (dm_media_id), INDEX dm_record_id_idx (dm_record_id), PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE = INNODB;
+CREATE TABLE article_dm_anchor (id INT, dm_anchor_id BIGINT, PRIMARY KEY(id, dm_anchor_id)) DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE = INNODB;
 CREATE TABLE article (id INT AUTO_INCREMENT, author BIGINT NOT NULL, done_on DATE, position BIGINT, root_id BIGINT, lft INT, rgt INT, level SMALLINT, INDEX author_idx (author), PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE = INNODB;
 CREATE TABLE article_skill (article_id INT, skill_id INT, PRIMARY KEY(article_id, skill_id)) DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE = INNODB;
 CREATE TABLE dm_anchor (id BIGINT AUTO_INCREMENT, record_model VARCHAR(255) NOT NULL, record_id BIGINT NOT NULL, url VARCHAR(255) NOT NULL, title VARCHAR(255) NOT NULL, type VARCHAR(255) DEFAULT 'direct' NOT NULL, description LONGTEXT, is_active TINYINT(1) DEFAULT '1' NOT NULL, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE = INNODB;
@@ -44,6 +45,8 @@ ALTER TABLE article_dm_tag ADD CONSTRAINT article_dm_tag_id_article_id FOREIGN K
 ALTER TABLE article_dm_tag ADD CONSTRAINT article_dm_tag_dm_tag_id_dm_tag_id FOREIGN KEY (dm_tag_id) REFERENCES dm_tag(id) ON DELETE CASCADE;
 ALTER TABLE article_dm_media ADD CONSTRAINT article_dm_media_dm_record_id_article_id FOREIGN KEY (dm_record_id) REFERENCES article(id) ON DELETE CASCADE;
 ALTER TABLE article_dm_media ADD CONSTRAINT article_dm_media_dm_media_id_dm_media_id FOREIGN KEY (dm_media_id) REFERENCES dm_media(id) ON DELETE CASCADE;
+ALTER TABLE article_dm_anchor ADD CONSTRAINT article_dm_anchor_id_article_id FOREIGN KEY (id) REFERENCES article(id) ON UPDATE CASCADE ON DELETE CASCADE;
+ALTER TABLE article_dm_anchor ADD CONSTRAINT article_dm_anchor_dm_anchor_id_dm_anchor_id FOREIGN KEY (dm_anchor_id) REFERENCES dm_anchor(id) ON DELETE CASCADE;
 ALTER TABLE article ADD CONSTRAINT article_author_dm_user_id FOREIGN KEY (author) REFERENCES dm_user(id);
 ALTER TABLE article_skill ADD CONSTRAINT article_skill_skill_id_skill_id FOREIGN KEY (skill_id) REFERENCES skill(id) ON DELETE CASCADE;
 ALTER TABLE article_skill ADD CONSTRAINT article_skill_article_id_article_id FOREIGN KEY (article_id) REFERENCES article(id) ON DELETE CASCADE;

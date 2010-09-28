@@ -1,5 +1,30 @@
-dp.SyntaxHighlighter.ClipboardSwf = '/themeZazabe2/syntax-highlighter/swf/clipboard.swf';
-dp.SyntaxHighlighter.HighlightAll('code');
+SyntaxHighlighter.autoloader.apply(null, [
+  'applescript            ' + mm.themeRootUrl + '/syntax-highlighter/scripts/shBrushAppleScript.js',
+  'actionscript3 as3      ' + mm.themeRootUrl + '/syntax-highlighter/scripts/shBrushAS3.js',
+  'bash shell             ' + mm.themeRootUrl + '/syntax-highlighter/scripts/shBrushBash.js',
+  'coldfusion cf          ' + mm.themeRootUrl + '/syntax-highlighter/scripts/shBrushColdFusion.js',
+  'cpp c                  ' + mm.themeRootUrl + '/syntax-highlighter/scripts/shBrushCpp.js',
+  'c# c-sharp csharp      ' + mm.themeRootUrl + '/syntax-highlighter/scripts/shBrushCSharp.js',
+  'css                    ' + mm.themeRootUrl + '/syntax-highlighter/scripts/shBrushCss.js',
+  'delphi pascal          ' + mm.themeRootUrl + '/syntax-highlighter/scripts/shBrushDelphi.js',
+  'diff patch pas         ' + mm.themeRootUrl + '/syntax-highlighter/scripts/shBrushDiff.js',
+  'erl erlang             ' + mm.themeRootUrl + '/syntax-highlighter/scripts/shBrushErlang.js',
+  'groovy                 ' + mm.themeRootUrl + '/syntax-highlighter/scripts/shBrushGroovy.js',
+  'java                   ' + mm.themeRootUrl + '/syntax-highlighter/scripts/shBrushJava.js',
+  'jfx javafx             ' + mm.themeRootUrl + '/syntax-highlighter/scripts/shBrushJavaFX.js',
+  'js jscript javascript  ' + mm.themeRootUrl + '/syntax-highlighter/scripts/shBrushJScript.js',
+  'perl pl                ' + mm.themeRootUrl + '/syntax-highlighter/scripts/shBrushPerl.js',
+  'php                    ' + mm.themeRootUrl + '/syntax-highlighter/scripts/shBrushPhp.js',
+  'text plain             ' + mm.themeRootUrl + '/syntax-highlighter/scripts/shBrushPlain.js',
+  'py python              ' + mm.themeRootUrl + '/syntax-highlighter/scripts/shBrushPython.js',
+  'ruby rails ror rb      ' + mm.themeRootUrl + '/syntax-highlighter/scripts/shBrushRuby.js',
+  'sass scss              ' + mm.themeRootUrl + '/syntax-highlighter/scripts/shBrushSass.js',
+  'scala                  ' + mm.themeRootUrl + '/syntax-highlighter/scripts/shBrushScala.js',
+  'sql                    ' + mm.themeRootUrl + '/syntax-highlighter/scripts/shBrushSql.js',
+  'vb vbnet               ' + mm.themeRootUrl + '/syntax-highlighter/scripts/shBrushVb.js',
+  'xml xhtml xslt html    ' + mm.themeRootUrl + '/syntax-highlighter/scripts/shBrushXml.js'
+]);
+SyntaxHighlighter.all();
 
 
 var box = null;
@@ -42,7 +67,18 @@ $(document).ready(function(){
 				width:     ($('#boxes li').outerWidth(true)*3),
 				height:   ($('#boxes li').outerHeight(true)*3)
 			});
-		  	box = new boxes({effect: 'easeInElastic', duration: 3000, interval: 10000});
+		  	
+			$('#boxes').qbox({
+				slide: {
+					effect: 'easeInElastic',
+					duration: 3000
+				},
+				qtime: {
+					interval: 4,     //number of step
+					step:     1000,  //step duration in ms
+					running:  true   //true if timer is running at instanciation
+				}
+			});
 			
 			
 			$('#boxes li').each(function(){
@@ -83,21 +119,23 @@ $(document).ready(function(){
 			relswitcher.addClass('open');
 			relswitcher.click(function(){
 				if(relswitcher.hasClass('open')){
-					
-					relative.animate({  width : relWidth.to.relative}, 3000, 'easeOutBounce', function() {
+					relative.animate({  'width' : relWidth.to.relative + 'px'}, 3000, 'easeOutBounce', function() {
 					  relswitcher.removeClass('open');
 					});
-					article.animate({   width : relWidth.to.article}, 1000, 'linear', function(){
+					article.animate({   'width' : relWidth.to.article + 'px'}, 1000, 'linear', function(){
 					  setTimeout(function(){
-					  	relcontent.animate({opacity : 1}, 2000);	
+					  	relcontent.css({display: 'block'});
+					  	relcontent.animate({'opacity' : '1'}, 2000);	
 					  }, 1000);
 					});
 					
 				}
 				else {
-					relcontent.animate({opacity : 0}, 300);	
-					relative.animate({  width : relWidth.from.relative}, 1000, 'linear');
-					article.animate({   width : relWidth.from.article}, 1000, 'linear', function() {
+					relcontent.animate({'opacity' : '0'}, 300, 'linear', function(){
+						relcontent.css({display: 'none'});
+					});	
+					relative.animate({  'width' : relWidth.from.relative + 'px'}, 1000, 'linear');
+					article.animate({   'width' : relWidth.from.article + 'px'}, 1000, 'linear', function() {
 					  relswitcher.addClass('open');
 					});
 				}

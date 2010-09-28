@@ -14,7 +14,7 @@ foreach ($articlePager as $article)
   echo _open('li.element');  
  
     
-    echo _link($article)->set('.pic')->text(_media($article->getFirstMedia())->size(160, 100)->method('fit')->background('#efefef'));  
+    echo _link($article)->set('.pic')->text(_media($article->getFirstMedia())->size(160, 100)->method('center'));  
     
     // wrap the article link into a H2 tag with the t_medium CSS class  
     echo _tag('h2.t_medium', _link($article));  
