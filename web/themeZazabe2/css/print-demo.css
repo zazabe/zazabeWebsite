@@ -8,6 +8,12 @@ body.print #dm_content {
 	padding: 0px;
 }
 
+
+body.print .content_image {
+  float: left;
+}
+
+
 body.print .contact {
 	float: right;
 }
@@ -125,8 +131,5 @@ body.print .skills .skillbar.off {
 	width:128px;
 }
 
-body.print #sfWebDebug,
-body.print a.back {
-	display: none;
-}
+
 

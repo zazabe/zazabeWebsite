@@ -9,6 +9,10 @@ body.print .contact {
 	margin: 0 0 0 282pt;
 }
 
+body.print .content_image {
+  float: left;
+}
+
 body.print tbody td {
 	width: 75%;
 }
