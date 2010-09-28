@@ -84,7 +84,7 @@ skillable.prototype.animate = function(){
 		coef   = barOff.width()/this.options.maxlevel;
 	
 	$(barOn).animate({
-		width: parseInt(this.element.getLevel(this.options) * coef) 
+		width: (parseInt(this.element.getLevel(this.options) * coef)) + 'px' 
 	}, this.options.animation.duration, this.options.animation.effect);
 }
 
