@@ -63,7 +63,8 @@ body.print tbody .descriptions li, body.print tbody .projects li, body.print tbo
 
 body.print tbody td.years {
 	font-size:14pt;
-	width: 170px;
+	width: 200px;
+	height: 30px;
 }
 
 body.print .skills li {
@@ -112,10 +113,10 @@ body.print tbody tr.details {
 }
 
 body.print tbody .descriptions {
-	width: 75%;
+	width: 85%;
 }
 body.print tbody .related {
-	width: 25%;
+	width: 15%;
 	border-right:1px solid #DDDDDD;
 }
 

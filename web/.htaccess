@@ -1,5 +1,13 @@
 Options +FollowSymLinks +ExecCGI
 
+#AuthType Basic
+#AuthName "Michel Meyer website coming soon"
+#AuthUserFile /home/zazabe/www/michel-meyer.fr/.htpasswd
+#Require valid-user
+
+
+
+
 # Add expiration dates to static content
 # sudo a2enmod expires && sudo apache2ctl restart
 <IfModule mod_expires.c>
@@ -33,7 +41,7 @@ Options +FollowSymLinks +ExecCGI
   # getting no_script_name to work
   
   RewriteCond %{HTTP_HOST} !^www\.michel-meyer\.fr$
-  RewriteCond %{HTTP_HOST} !^.*\.mm$
+  RewriteCond %{HTTP_HOST} !^zazabe\.mm$
   RewriteCond %{REMOTE_ADDR} !^94\.23\.32\.187$
   RewriteRule ^(.*)$ http://www.michel-meyer.fr/$1 [R=301]
 
