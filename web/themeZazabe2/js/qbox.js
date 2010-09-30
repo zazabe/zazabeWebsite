@@ -464,8 +464,8 @@ qbox.prototype.switchOutsidePositionsDisplay = function(){
 qbox.prototype.showOutsidePositions = function(){
 	var cssProperties = {
 			position: 'absolute',
-			width:  100,
-			height: 100,
+			width:  this.options.box.width - 7,
+			height: this.options.box.width - 7,
 			border: '2px solid #900',
 			background: '#daa',
 			padding: '5px',
@@ -476,6 +476,8 @@ qbox.prototype.showOutsidePositions = function(){
 	
 	for(var index=0;index<this.boxes.outside.active.length;index++){
 		outsideObj = this.boxes.outside.active[index];
+		text = index;
+		/*
 		text = '<strong>' + index + '</strong><br />anim:' + outsideObj.anim + '<br />move:' + outsideObj.move;
 		
 		text += '<br />cols: ';
@@ -483,7 +485,7 @@ qbox.prototype.showOutsidePositions = function(){
 		
 		text += '<br />rows:';
 		$(outsideObj.rows).each(function(){ text += this + '|'; });
-		
+		*/
 		$('<div>').css($.extend({
 			left:  outsideObj.pos.left,
 			top:   outsideObj.pos.top
